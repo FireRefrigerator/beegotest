@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/httplib"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -16,6 +17,16 @@ type UserInfo struct {
 	Id       int64
 	Username string
 	Password string
+}
+
+func (c *TestModelController) HttpLibTest() {
+	req := httplib.Get("https://www.baidu.com")
+	reqstring, err := req.String()
+	if err != nil {
+		fmt.Println(reqstring)
+	}
+	c.Ctx.WriteString("hello httptest")
+	c.Ctx.WriteString(reqstring)
 }
 
 func (c *TestModelController) TestModel() {

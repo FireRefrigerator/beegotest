@@ -13,4 +13,5 @@ func init() {
 	beego.Router("/api/gethello", &controllers.SayController{}, "get,post:Gethello")
 	beego.Router("/api/deletehello", &controllers.SayController{}, "get:Sayhello;post:Gethello")
 	beego.Router("/api/testModel", &controllers.TestModelController{}, "get,post:TestModel")
+	beego.Router("/api/testHttpLib", &controllers.TestModelController{}, "get,post:HttpLibTest")
 }
