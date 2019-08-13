@@ -33,6 +33,3 @@ insert  into `user_info`(`id`,`username`,`password`) values (1,'lisi',''),(2,'wa
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
-// \G test 使用这个在dos下可列显示
-select * from information limit 3 \G
